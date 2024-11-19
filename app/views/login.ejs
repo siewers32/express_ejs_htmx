@@ -1,0 +1,24 @@
+<%- include('head', {title:"login"}) -%>
+    <h1>Login</h1>
+    <% if (error) { %>
+        <p style="color: red;">
+            <%= error %>
+        </p>
+        <% } %>
+            <form hx-post="/login" hx-swap="outerHTML">
+                <label for="username">Gebruikersnaam:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Wachtwoord:</label>
+                <input type="password" id="password" name="password" value="password123">
+                <br>
+                <button type="submit">Inloggen</button>
+            </form>
+            <div id="wrapper" onchange="changecolor(this)">
+                <div id="resultaat1"></div>
+                <div id="resultaat2"></div>
+            </div>
+            <script src="/js/htmx.js"></script>
+            <script src="/js/utilities.js"></script>
+
+            <%- include('foot') -%>

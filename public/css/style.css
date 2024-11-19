@@ -1,0 +1,27 @@
+body {
+    background-color: yellow;
+}
+
+div {
+}
+
+div#resultaat1 {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+
+div#resultaat2 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+
+div#wrapper {
+    background-color: aqua;
+    padding:10px;
+}
+
+.active {
+    background-color: orange;
+}
