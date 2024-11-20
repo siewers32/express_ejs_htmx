@@ -67,3 +67,9 @@ button.link {
     text-decoration: underline;
     cursor: pointer;
   }
+
+  header {
+    background-color: orange;
+    height:100px;
+    width:100%;
+  }
