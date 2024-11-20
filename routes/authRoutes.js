@@ -4,13 +4,16 @@ const authController = require('../app/controllers/authController');
 const homeController = require('../app/controllers/homeController');
 
 // Routes
-router.get('/', authController.redirectToLogin);
+router.get('/', homeController.showHomePage);
 router.get('/login', authController.showLoginPage);
 router.post('/login', authController.handleLogin);
 
 
 router.get('/dashboard', isAuthenticated, (req, res) => {
-    res.render('dashboard', { username: req.session.username });
+    res.render('dashboard', { 
+      username: req.session.username,
+      title: "dashboard"
+    });
 });
 router.get('/logout', authController.handleLogout);
 router.get('/zomaar', isAuthenticated, homeController.zomaarPage);

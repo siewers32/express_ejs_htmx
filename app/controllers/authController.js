@@ -22,15 +22,21 @@ exports.handleLogin = async (req, res) => {
     const { username, password } = req.body;
     try {
         const user = await userModel.findUserByUsername(username);
-        const isMatch = await bcrypt.compare(password, user.password);
+        let isMatch = false;
+        if(user) {
+            isMatch = await bcrypt.compare(password, user.password); 
+        }
         if (isMatch) {         
             req.session.loggedIn = true;
             req.session.username = username;
-            res.render('dashboard', {user});
-            // res.render('login', { error: 'Je bent nu ingelogd' });
+            res.render('dashboard', {
+                user: user,
+                title: 'dashboard'
+            });
         } else {
             res.render('login', { error: 'Ongeldige gebruikersnaam of wachtwoord!' });
         }
+        
     } catch (err) {
         console.error(err);
         res.render('login', { error: 'Er is een probleem opgetreden. Probeer het later opnieuw.' });

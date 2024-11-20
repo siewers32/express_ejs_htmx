@@ -31,7 +31,7 @@ body {
     margin: 0;
 }
 
-div#page-wrap {
+main {
     width: 900px;
 }
 
@@ -55,3 +55,15 @@ div#wrapper {
 .active {
     background-color: orange;
 }
+
+button.link {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+  }

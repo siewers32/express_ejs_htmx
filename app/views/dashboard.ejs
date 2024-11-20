@@ -1,6 +1,6 @@
 <div>
-    <h1>Welkom, <%= user.name %>!</h1>
-    <a hx-get="/logout" hx-swag="outerHTML">Uitloggen</a>
+    <h1>Welkom, <%= user.username %>!</h1>
+    <button class="link" hx-get="/logout" hx-target="#content" hx-swap="innerHTML">Uitloggen</button>
+    <div id="resultaat2">Dit moet naar resultaat 2</div>
     <div id="resultaat1" hx-swap-oob="true">Dit moet naar resultaat 1</div>
-    <div id="resultaat2" hx-swap-oob="true">Dit moet naar resultaat 2</div>
 </div>
