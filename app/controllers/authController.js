@@ -26,7 +26,7 @@ exports.handleLogin = async (req, res) => {
         if (isMatch) {         
             req.session.loggedIn = true;
             req.session.username = username;
-            res.redirect('/dashboard');
+            res.render('dashboard', {user});
             // res.render('login', { error: 'Je bent nu ingelogd' });
         } else {
             res.render('login', { error: 'Ongeldige gebruikersnaam of wachtwoord!' });

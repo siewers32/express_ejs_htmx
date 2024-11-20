@@ -1,8 +1,38 @@
-body {
-    background-color: yellow;
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
-div {
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+body {
+    display: flex;
+    justify-content: space-around;
+    background-color: yellow;
+    font-family: "Lato", serif;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div#page-wrap {
+    width: 900px;
 }
 
 div#resultaat1 {
@@ -19,7 +49,7 @@ div#resultaat2 {
 
 div#wrapper {
     background-color: aqua;
-    padding:10px;
+    padding: 10px;
 }
 
 .active {

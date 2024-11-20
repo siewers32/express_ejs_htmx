@@ -18,6 +18,7 @@ app.use(session(sessionConfig));
 app.use('/css',express.static(path.join(__dirname, 'public/css')));
 app.use('/assets',express.static(path.join(__dirname, 'public/assets')));
 app.use('/js',express.static(path.join(__dirname, 'public/js')));
+app.use('/fonts',express.static(path.join(__dirname, 'public/fonts')));
 
 // Routes
 app.use('/', authRoutes);
